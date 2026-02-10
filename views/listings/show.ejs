@@ -82,7 +82,7 @@
     <% if (listing.geometry && listing.geometry.coordinates) { %>
     <script>
         var coordinates = <%-JSON.stringify(listing.geometry.coordinates)%>;
-        var locationName = "<%= listing.location %>";
+        var locationName = "<%= listing.title %>";
     </script>
     <% } %>
     <div id="map" style="height: 400px;"></div>
