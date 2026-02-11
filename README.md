@@ -1,26 +1,26 @@
-🌍 WanderLust – Full Stack Travel Listing Platform
+🌍 WanderLust – Full Stack Travel Accommodation Platform
 
-WanderLust is a full-stack travel accommodation web application where users can explore, create, edit, and review property listings. The platform allows property owners to showcase destinations while travelers can discover stays and leave reviews.
+WanderLust is a production-ready full-stack web application that enables users to discover, create, and manage travel accommodation listings. The platform integrates authentication, image uploads, geolocation services, and role-based authorization to deliver a complete real-world CRUD experience.
 
-Built using modern backend architecture and interactive map integration, the project demonstrates complete CRUD functionality with authentication and geolocation features.
+Designed with scalable backend architecture and interactive map integration, this project demonstrates modern full-stack development practices using the MERN ecosystem fundamentals.
 
-🚀 Features
+🚀 Core Features
 
-🔐 User Authentication (Register / Login / Logout)
+🔐 Secure User Authentication (Register / Login / Logout)
 
-🏠 Create, Edit & Delete Listings
+🏠 Create, Update & Delete Property Listings
 
-🗺️ Interactive Map with Location Marker (OpenStreetMap + Leaflet)
+🖼️ Cloud-based Image Upload (Cloudinary Integration)
 
 ⭐ Review & Rating System
 
-🖼️ Image Upload with Cloudinary
+🛡️ Role-Based Authorization (Owner-only modifications)
 
-🛡️ Authorization (Only owners can edit/delete)
+🗺️ Interactive Map with Geolocation (Leaflet + OpenStreetMap)
 
-💬 Flash Messages & Error Handling
+💬 Flash Messaging & Centralized Error Handling
 
-📱 Responsive UI
+📱 Responsive UI using Bootstrap
 
 🛠️ Tech Stack
 Backend
@@ -33,78 +33,81 @@ MongoDB
 
 Mongoose
 
+Passport.js (Authentication)
+
 Frontend
 
-EJS Templates
+EJS (Server-Side Rendering)
 
 Bootstrap
 
-Leaflet.js (Maps)
+Leaflet.js (Maps & Location Display)
 
-Other Tools
+Integrations & Tools
 
 Cloudinary (Image Hosting)
 
-Multer (File Upload)
+Multer (File Upload Handling)
 
-Passport.js (Authentication)
+OpenStreetMap (Geocoding Services)
 
-OpenStreetMap (Geocoding)
+Express-Session & Connect-Flash
 
-📁 Project Structure
-controllers/   → Business logic (Listings, Reviews, Users)
-models/        → Mongoose Schemas
-routes/        → Express Routes
-views/         → EJS Templates
-public/        → CSS & Client-side JS
-utils/         → Custom middleware & error handling
+📁 Project Architecture
+controllers/   → Application logic (Listings, Reviews, Users)
+models/        → Mongoose Schemas & Data Models
+routes/        → Route Definitions
+views/         → EJS Templates (UI Layer)
+public/        → Static Assets (CSS, JS)
+utils/         → Custom Middleware & Error Handling
 
-🔐 Authentication & Authorization
 
-Users must be logged in to create listings.
+The project follows a clean MVC architecture to ensure separation of concerns and maintainability.
+
+🔐 Authentication & Authorization Flow
+
+Only authenticated users can create listings.
 
 Only listing owners can edit or delete their listings.
 
-Reviews are linked to authenticated users.
+Reviews are linked to registered users.
 
-🗺️ Map Integration
+Protected routes use middleware-based access control.
+
+🗺️ Map & Location Integration
 
 Each listing stores geographic coordinates using OpenStreetMap geocoding.
-The location is displayed using Leaflet with animated marker effects.
+Locations are displayed dynamically on an interactive Leaflet map with markers for better visualization.
 
-📦 Installation
-git clone https://github.com/SaikaIslam999/WANDERLUST-PROJECT.git
+⚙️ Local Installation Guide
+1️⃣ Clone the Repository
+git clone https://github.com/saikaislam999/WANDERLUST-PROJECT.git
 cd WANDERLUST-PROJECT
+
+2️⃣ Install Dependencies
 npm install
 
+3️⃣ Configure Environment Variables
 
-Create a .env file:
+Create a .env file in the root directory and add:
 
-MONGO_URL=your_mongodb_connection
+MONGO_URL=your_mongodb_connection_string
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-SESSION_SECRET=your_secret
+SESSION_SECRET=your_session_secret
 
-
-Run the server:
-
+4️⃣ Run the Application
 node app.js
 
-🎯 Future Improvements
 
-Wishlist feature
+Or using nodemon:
 
-Advanced search & filtering
+nodemon app.js
 
-Booking system
+5️⃣ Access the Application
+http://localhost:3000
 
-Payment integration
+👨‍💻 Developer
 
-User profile dashboard
-
-👩‍💻 Developed By
-
-Saika Islam 
-
-Full Stack Web Development Project
+Developed with focus on backend architecture, authentication security, and scalable project structure.
